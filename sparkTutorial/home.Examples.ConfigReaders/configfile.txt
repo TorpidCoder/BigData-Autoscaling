@@ -1,0 +1,5 @@
+[wordCount]
+master = local
+appname = wordcount
+inputfile = /Users/sahilnagpal/PycharmProjects/sparkTutorial/sampleFile.txt
+outputfile = /Users/sahilnagpal/PycharmProjects/sparkTutorial/wordcountouput

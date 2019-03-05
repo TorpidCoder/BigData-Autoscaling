@@ -1,0 +1,3 @@
+The MapPartition converts each partition of the source RDD into many elements of the result (possibly none).
+In mapPartition, the map function is applied on each partitions simultaneously.
+MapPartition is like a map, but the difference is it runs separately on each partition(block) of the RDD.
