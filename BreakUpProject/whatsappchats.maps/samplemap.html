@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_73f38b59278d44cbbd8223952998400b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://rawcdn.githack.com/ardhi/Leaflet.MousePosition/c32f1c84/src/L.Control.MousePosition.js"></script>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ardhi/Leaflet.MousePosition/c32f1c84/src/L.Control.MousePosition.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_73f38b59278d44cbbd8223952998400b" ></div>
+        
+</body>
+<script>    
+    
+            var map_73f38b59278d44cbbd8223952998400b = L.map(
+                "map_73f38b59278d44cbbd8223952998400b",
+                {
+                    center: [30.808486633333334, 45.633120222222225],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_70480a26a86844bcb9141eeffeb2550b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var mouse_position_4dbb2eba0f37433d9aba670aa2ed3eaf = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "", "separator": " : "}
+            );
+            mouse_position_4dbb2eba0f37433d9aba670aa2ed3eaf.options["latFormatter"] =
+                undefined;
+            mouse_position_4dbb2eba0f37433d9aba670aa2ed3eaf.options["lngFormatter"] =
+                undefined;
+            map_73f38b59278d44cbbd8223952998400b.addControl(mouse_position_4dbb2eba0f37433d9aba670aa2ed3eaf);
+        
+    
+            var marker_f7ab8c31d88843eaa8f86c0230c7b44e = L.marker(
+                [28.71302, 77.158752],
+                {}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var icon_18f3f1c2013f4d7abf30f83e2e498878 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f7ab8c31d88843eaa8f86c0230c7b44e.setIcon(icon_18f3f1c2013f4d7abf30f83e2e498878);
+        
+    
+        var popup_b6f8a0b07f0d46f28c5e756116cb2c13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e33ff445fd9144f092ea8876f5503437 = $(`<div id="html_e33ff445fd9144f092ea8876f5503437" style="width: 100.0%; height: 100.0%;">483475.64971751405</div>`)[0];
+            popup_b6f8a0b07f0d46f28c5e756116cb2c13.setContent(html_e33ff445fd9144f092ea8876f5503437);
+        
+
+        marker_f7ab8c31d88843eaa8f86c0230c7b44e.bindPopup(popup_b6f8a0b07f0d46f28c5e756116cb2c13)
+        ;
+
+        
+    
+    
+            marker_f7ab8c31d88843eaa8f86c0230c7b44e.bindTooltip(
+                `<div>
+                     Click me to get Average Price!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b5409d8f5d542039a4f9bd07c6ee2d5 = L.marker(
+                [28.65868, 77.21245],
+                {}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var icon_b4d48eeadfd945d4b575e8b172abd516 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5b5409d8f5d542039a4f9bd07c6ee2d5.setIcon(icon_b4d48eeadfd945d4b575e8b172abd516);
+        
+    
+        var popup_387fd8cae0ce49a9ab9623faae6a0696 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f93887009f7144a58e67c3b730f6e883 = $(`<div id="html_f93887009f7144a58e67c3b730f6e883" style="width: 100.0%; height: 100.0%;">169981.81818181818</div>`)[0];
+            popup_387fd8cae0ce49a9ab9623faae6a0696.setContent(html_f93887009f7144a58e67c3b730f6e883);
+        
+
+        marker_5b5409d8f5d542039a4f9bd07c6ee2d5.bindPopup(popup_387fd8cae0ce49a9ab9623faae6a0696)
+        ;
+
+        
+    
+    
+            marker_5b5409d8f5d542039a4f9bd07c6ee2d5.bindTooltip(
+                `<div>
+                     Click me to get Average Price!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7773ddac2b714a5e91e74203b500107c = L.marker(
+                [55.756538, 37.614922],
+                {}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var icon_2880b0e7c16b4ef9bb089988591c2f11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7773ddac2b714a5e91e74203b500107c.setIcon(icon_2880b0e7c16b4ef9bb089988591c2f11);
+        
+    
+        var popup_db88a61be926435ebad4979f4fc9fc22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e9eaaf2c86e4afbb43a2c26a2a1373d = $(`<div id="html_3e9eaaf2c86e4afbb43a2c26a2a1373d" style="width: 100.0%; height: 100.0%;">293450.0</div>`)[0];
+            popup_db88a61be926435ebad4979f4fc9fc22.setContent(html_3e9eaaf2c86e4afbb43a2c26a2a1373d);
+        
+
+        marker_7773ddac2b714a5e91e74203b500107c.bindPopup(popup_db88a61be926435ebad4979f4fc9fc22)
+        ;
+
+        
+    
+    
+            marker_7773ddac2b714a5e91e74203b500107c.bindTooltip(
+                `<div>
+                     Click me to get Average Price!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_509c2e8a71c2418192b5f55b6d0f1f88 = L.marker(
+                [52.4829, -1.89346],
+                {}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var icon_cbb699079d744537b70efbab04951df2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_509c2e8a71c2418192b5f55b6d0f1f88.setIcon(icon_cbb699079d744537b70efbab04951df2);
+        
+    
+        var popup_9ee375ce18774c1ea9eaa87b3ba60c13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93bdf95f26be4e1ab7619a7717c2aa12 = $(`<div id="html_93bdf95f26be4e1ab7619a7717c2aa12" style="width: 100.0%; height: 100.0%;">699000.0</div>`)[0];
+            popup_9ee375ce18774c1ea9eaa87b3ba60c13.setContent(html_93bdf95f26be4e1ab7619a7717c2aa12);
+        
+
+        marker_509c2e8a71c2418192b5f55b6d0f1f88.bindPopup(popup_9ee375ce18774c1ea9eaa87b3ba60c13)
+        ;
+
+        
+    
+    
+            marker_509c2e8a71c2418192b5f55b6d0f1f88.bindTooltip(
+                `<div>
+                     Click me to get Average Price!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c895edd31fa14a42a5f0ca818a51ddd9 = L.marker(
+                [40.741895, -73.989308],
+                {}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var icon_a3aac9afa254419788bc18aac7f7b224 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c895edd31fa14a42a5f0ca818a51ddd9.setIcon(icon_a3aac9afa254419788bc18aac7f7b224);
+        
+    
+        var popup_5aaabdce264f4db8a5a69018760bd934 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2cde0b9df324ecabcdd2736752ae822 = $(`<div id="html_f2cde0b9df324ecabcdd2736752ae822" style="width: 100.0%; height: 100.0%;">359062.2064965197</div>`)[0];
+            popup_5aaabdce264f4db8a5a69018760bd934.setContent(html_f2cde0b9df324ecabcdd2736752ae822);
+        
+
+        marker_c895edd31fa14a42a5f0ca818a51ddd9.bindPopup(popup_5aaabdce264f4db8a5a69018760bd934)
+        ;
+
+        
+    
+    
+            marker_c895edd31fa14a42a5f0ca818a51ddd9.bindTooltip(
+                `<div>
+                     Click me to get Average Price!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_509c274fbc7641eb8f089be0767a3083 = L.marker(
+                [44.2979133, -78.3229422],
+                {}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var icon_c24e38f2f4524f27b265f68276f9948b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_509c274fbc7641eb8f089be0767a3083.setIcon(icon_c24e38f2f4524f27b265f68276f9948b);
+        
+    
+        var popup_df6747d5b4344d2494e767d29df28a6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_35fef84d88724cbdaf995065a57c0acd = $(`<div id="html_35fef84d88724cbdaf995065a57c0acd" style="width: 100.0%; height: 100.0%;">266356.3739837398</div>`)[0];
+            popup_df6747d5b4344d2494e767d29df28a6e.setContent(html_35fef84d88724cbdaf995065a57c0acd);
+        
+
+        marker_509c274fbc7641eb8f089be0767a3083.bindPopup(popup_df6747d5b4344d2494e767d29df28a6e)
+        ;
+
+        
+    
+    
+            marker_509c274fbc7641eb8f089be0767a3083.bindTooltip(
+                `<div>
+                     Click me to get Average Price!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a92e5f598f994557ac493054cf2a0834 = L.marker(
+                [30.595105100000005, 114.29993529999999],
+                {}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var icon_5b22f34616d14cdcbfefca2a57eb5387 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a92e5f598f994557ac493054cf2a0834.setIcon(icon_5b22f34616d14cdcbfefca2a57eb5387);
+        
+    
+        var popup_acf136754bf74599a00b8920e968d675 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20d03caefb4c4d29954d911e019e8009 = $(`<div id="html_20d03caefb4c4d29954d911e019e8009" style="width: 100.0%; height: 100.0%;">325000.0</div>`)[0];
+            popup_acf136754bf74599a00b8920e968d675.setContent(html_20d03caefb4c4d29954d911e019e8009);
+        
+
+        marker_a92e5f598f994557ac493054cf2a0834.bindPopup(popup_acf136754bf74599a00b8920e968d675)
+        ;
+
+        
+    
+    
+            marker_a92e5f598f994557ac493054cf2a0834.bindTooltip(
+                `<div>
+                     Click me to get Average Price!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b689b488286c456fa9e02da82e5b086d = L.marker(
+                [-33.8548157, 151.2164539],
+                {}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var icon_88d2b82bf61242fdbd0be23dad0cb577 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b689b488286c456fa9e02da82e5b086d.setIcon(icon_88d2b82bf61242fdbd0be23dad0cb577);
+        
+    
+        var popup_12c69060525f4d3baa5debf4e61d5ead = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cc415d39939844069c689cfcc39c7742 = $(`<div id="html_cc415d39939844069c689cfcc39c7742" style="width: 100.0%; height: 100.0%;">657858.0645161291</div>`)[0];
+            popup_12c69060525f4d3baa5debf4e61d5ead.setContent(html_cc415d39939844069c689cfcc39c7742);
+        
+
+        marker_b689b488286c456fa9e02da82e5b086d.bindPopup(popup_12c69060525f4d3baa5debf4e61d5ead)
+        ;
+
+        
+    
+    
+            marker_b689b488286c456fa9e02da82e5b086d.bindTooltip(
+                `<div>
+                     Click me to get Average Price!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_23b6268ed1da49699dc08274109888de = L.marker(
+                [29.885144, 107.401279],
+                {}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var icon_59393f3e11c44756aadf04374a123aa2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_23b6268ed1da49699dc08274109888de.setIcon(icon_59393f3e11c44756aadf04374a123aa2);
+        
+    
+        var popup_9ddee9fea4354f8282c2bf1b82f31576 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b7dbe4e181e4049a4613354dfbe33c1 = $(`<div id="html_8b7dbe4e181e4049a4613354dfbe33c1" style="width: 100.0%; height: 100.0%;">603225.0</div>`)[0];
+            popup_9ddee9fea4354f8282c2bf1b82f31576.setContent(html_8b7dbe4e181e4049a4613354dfbe33c1);
+        
+
+        marker_23b6268ed1da49699dc08274109888de.bindPopup(popup_9ddee9fea4354f8282c2bf1b82f31576)
+        ;
+
+        
+    
+    
+            marker_23b6268ed1da49699dc08274109888de.bindTooltip(
+                `<div>
+                     Click me to get Average Price!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var tile_layer_2fd14c2595644b74ad9573d4e6511b48 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_4c7e75996e2147548c1674321af344de = new L.Control.MiniMap(
+                tile_layer_2fd14c2595644b74ad9573d4e6511b48,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_73f38b59278d44cbbd8223952998400b.addControl(mini_map_4c7e75996e2147548c1674321af344de);
+        
+    
+            var options = {
+              position: "topleft",
+              draw: {},
+              edit: {},
+            }
+            // FeatureGroup is to store editable layers.
+            var drawnItems = new L.featureGroup().addTo(
+                map_73f38b59278d44cbbd8223952998400b
+            );
+            options.edit.featureGroup = drawnItems;
+            var draw_control_d2916c365d1f4fab8df484e9eb5a52df = new L.Control.Draw(
+                options
+            ).addTo( map_73f38b59278d44cbbd8223952998400b );
+            map_73f38b59278d44cbbd8223952998400b.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems.addLayer(layer);
+             });
+            map_73f38b59278d44cbbd8223952998400b.on('draw:created', function(e) {
+                drawnItems.addLayer(e.layer);
+            });
+            
+        
+    
+            var marker_cluster_279a66e59bb54e54bdd420b73edf202f = L.markerClusterGroup(
+                {}
+            );
+            map_73f38b59278d44cbbd8223952998400b.addLayer(marker_cluster_279a66e59bb54e54bdd420b73edf202f);
+        
+    
+            var tile_layer_91376dfe33f14df6b3a056737741cae4 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var tile_layer_95cf42b901564eedb87abf547153b529 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+        
+    
+            var layer_control_862c4077baff48c0a4d4e90681863b44 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_95cf42b901564eedb87abf547153b529,
+                    "stamentoner" : tile_layer_91376dfe33f14df6b3a056737741cae4,
+                },
+                overlays :  {
+                    "Clusters" : marker_cluster_279a66e59bb54e54bdd420b73edf202f,
+                },
+            };
+            L.control.layers(
+                layer_control_862c4077baff48c0a4d4e90681863b44.base_layers,
+                layer_control_862c4077baff48c0a4d4e90681863b44.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_73f38b59278d44cbbd8223952998400b);
+            tile_layer_91376dfe33f14df6b3a056737741cae4.remove();
+            tile_layer_95cf42b901564eedb87abf547153b529.remove();
+        
+</script>
